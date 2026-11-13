@@ -1,10 +1,31 @@
 # Cinema atlas: spatial tools
 
+## Home and feature pages
+
+The generated `graph_explorer.html` is a small multi-view atlas. Its landing
+page contains the collection overview and links to dedicated views; feature
+content is not stacked below the home screen. The header opens:
+
+| View | URL |
+|---|---|
+| Home | `graph_explorer.html?page=home` |
+| Film graph | `graph_explorer.html?page=graph` |
+| Ask Atlas | `graph_explorer.html?page=chat` |
+| Map tools | `graph_explorer.html?page=map` |
+| Data library | `graph_explorer.html?page=data` |
+
+Ask Atlas also remains available from its floating launcher on the other views.
+The hero poster and map marker respond to pointer movement, and the collection
+counts and feature cards animate into view. Animations respect reduced-motion
+preferences. These views use query routes so the standalone atlas keeps one
+embedded data bundle rather than copying the large graph into several pages.
+
 ## Conversational interface
 
-The prominent chat above the atlas adds session-only history, context-preserving
-follow-ups and evidence-backed film questions. It shares the existing spatial
-engine, map, filters and exports. It needs no API key or language-model service.
+Ask Atlas is a docked chat drawer and a dedicated feature view. It adds
+session-only history, context-preserving follow-ups and evidence-backed film
+questions. It shares the existing spatial engine, map, filters and exports. It
+needs no API key or language-model service.
 
 | Example | Operation |
 |---|---|
@@ -35,7 +56,7 @@ The nine chat tests cover interpretation, contextual filters, unsupported input,
 ambiguity, missing data, film remakes, evidence, region selection and real graph
 benchmarks. That original command runs 32 tests; the expanded command below runs 42.
 
-The atlas is part of the existing graph explorer. The statistics and movie graph remain above it. Six tools share the same movie filters, graph IDs, evidence and result renderer.
+The map view is part of the existing graph explorer. Six tools share the same movie filters, graph IDs, evidence and result renderer.
 
 | Tool | Calculation | Inputs |
 | --- | --- | --- |
